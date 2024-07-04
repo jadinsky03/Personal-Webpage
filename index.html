@@ -6,9 +6,7 @@
     <link rel="stylesheet" href="./style.css">
     <title>My Webpage</title>
 </head>
-
 <body>
-
     <header>
         <h1>Welcome to my abode(please don't mind the very ugly coloring🥸)</h1>
         <p>Hey there, I'm Jad, a 20 year old Software Engineering student at the University of Glasgow.
@@ -17,12 +15,9 @@
         <h3>Click here to see my picture</h3>
         <button type="button" onclick="show()" id="btnID">Show Image</button>
         <img id="image" src="" />
-        
-        
-    </header>
-    
+    </header>   
     <main>
-
+        <!-- section 1 -->
         <button class="accordion">My Background</button>
         <div class="panel">
             <p>I am a 20 year old from Lebanon. I was born in Beirut in 2003 and lived there all my life.
@@ -32,7 +27,7 @@
                 I love spending time with friends and family and try to make the most out of the time I get to spend with them. 
             </p>
         </div>
-        
+        <!-- end of section 1 -->
         <button class="accordion">My Skills</button>
         <div class="panel">
             <ul>
@@ -42,7 +37,6 @@
                 <li>Problem Solving: I always try finding good and efficient solutions to problems in the easiest way possible.</li>
             </ul>
         </div>
-
         <button class="accordion">My Hobbies</button>
         <div class="panel">
             <ul>
@@ -52,39 +46,6 @@
                 <li>Coding</li>
             </ul>
         </div>
-
-        <script>
-            window.onload=function userInput() {
-                let person = prompt("Please enter your name");
-                if (person != null) {
-                    alert("Welcome " + person + ", thanks for visiting my webpage! Have fun!");
-                }
-            }
-
-            var acc = document.getElementsByClassName("accordion");
-            var i;
-
-            for (i = 0; i < acc.length; i++) {
-                acc[i].addEventListener("click", function() {
-                    this.classList.toggle("active");
-                    var panel = this.nextElementSibling;
-                    if (panel.style.display === "block") {
-                        panel.style.display = "none";
-                    } else {
-                        panel.style.display = "block";
-                    }
-                })
-            }
-
-            function show() {
-                let image = document.getElementById("image");
-                image.src ="./jadpic.JPG"
-                image.style.display = "block";
-                document.getElementById("btnID").style.display = image;
-            }
-        </script>
-
     </main>
-
 </body>
 </html>
