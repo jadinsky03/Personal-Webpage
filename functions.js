@@ -22,7 +22,14 @@ for (i = 0; i < acc.length; i++) {
 
 function show() {
     let image = document.getElementById("image");
-    image.src ="./jadpic.jpg"
-    image.style.display = "block";
-    document.getElementById("btnID").style.display = image;
+    let button = document.getElementById("btnID");
+
+    if (image.style.display === "block") {
+        image.style.display = "none";
+        button.innerHTML = "Show Image";
+    } else {
+        image.src = "./jadpic.jpg";
+        image.style.display = "block";
+        button.innerHTML = "Hide Image";
+    }
 }
